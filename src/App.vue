@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <MultiRangeComponent :min="min" :max="max" :step="step"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MultiRangeComponent from "./components/MultiRangeComponent.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    MultiRangeComponent,
+  },
+  data() {
+    return {
+      min:0,
+      max:1,
+      step:0.1
+    }
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
